@@ -8,6 +8,7 @@ const auth = require('../middlewares/auth');
 const router = routerx();
 
 router.post('/add', auth.verifyUsuario, usuarioController.add);
+//----->elimino auth.verifyUsuario --validación de
 // router.get('/query', auth.verifyUsuario, usuarioController.query);
 router.get('/list', auth.verifyUsuario, usuarioController.list);
 router.put('/update', auth.verifyUsuario, usuarioController.update);

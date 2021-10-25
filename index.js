@@ -5,7 +5,7 @@ const router = require('./routes');
 const path = require('path');
 
 
-/*const bodyParser = require('body-parser');*/
+const bodyParser = require('body-parser');
 
 
 const app = express();
@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')))
-
+//primera correcion/api/usuario -> eliminar usuario
 app.use('/api', router);
 
 app.set('port', process.env.PORT || 3000);
